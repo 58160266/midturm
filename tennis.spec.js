@@ -1,17 +1,23 @@
 function TennisGame() {
   const scoreSrting = ['Love' , 'Fifteen' , 'Thirty','Forthy']
   this.playerAScore = 0
+  this.playerBScore = 0
 
   this.reset = () =>{
     this.playerAScore = 0
+    this.playerBScore = 0
   }
 
   this.echo = () => {
-    return `${scoreSrting[this.playerAScore]} - Love`
+    return `${scoreSrting[this.playerAScore]} - ${scoreSrting[this.playerBScore]}`
   }
 
   this.playerAGetScore = () => {
     this.playerAScore++
+  }
+
+  this.playerBGetScore = () => {
+    this.playerBScore++
   }
 }
 
